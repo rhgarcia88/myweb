@@ -102,7 +102,7 @@ Key Functionalities:
     technologies: ["React.js", "Vite", "Styled Components"],
     images: ['/public/projects/this/cv.png'],
     thumb: '/public/projects/this/cv.png',
-    codeLink: "https://github.com/"
+    codeLink: "https://github.com/rhgarcia88/myweb"
 
   }
 
