@@ -13,8 +13,8 @@ const ProjectsPage = () => {
       description: t('automolina_description'),
       technologies: ["React", "MongoDB", "Express", "Node.js", "Git"],
       testimonial: t('automolina_testimonial'),
-      images: ['/projects/molina/vehicles.png', '/projects/molina/newClass.png', '/projects/molina/thumb.png'],
-      thumb: '/projects/molina/thumb.png',
+      images: ['/projects/molina/vehicles.PNG', '/projects/molina/newClass.PNG', '/projects/molina/thumb.PNG'],
+      thumb: '/projects/molina/thumb.PNG',
     },
     {
       id: 2,
@@ -29,8 +29,8 @@ const ProjectsPage = () => {
       name: 'hardness_lab',
       description: t('hardness_lab_description'),
       technologies: ["Unity 3D", "C#", "Blender", "Netlify"],
-      images: ['/projects/ucav/durometer.png', '/projects/ucav/durometer2.png','/projects/ucav/durometer3.png'],
-      thumb: '/projects/ucav/durometer.png',
+      images: ['/projects/ucav/durometer.PNG', '/projects/ucav/durometer2.PNG','/projects/ucav/durometer3.PNG'],
+      thumb: '/projects/ucav/durometer.PNG',
       youtubeLink: "https://www.youtube.com/embed/qTCxIO_bEg8",
     },
     {
@@ -38,8 +38,8 @@ const ProjectsPage = () => {
       name: 'zardahi',
       description: t('zardahi_description'),
       technologies: ["C#", "Unity", "Shader Programming"],
-      images: ['/projects/zardahi/zardahi.png'],
-      thumb: '/projects/zardahi/zardahi.png',
+      images: ['/projects/zardahi/zardahi.PNG'],
+      thumb: '/projects/zardahi/zardahi.PNG',
       youtubeLink: "https://www.youtube.com/embed/D_3NZbdVUZ0",
     },
     {
@@ -47,8 +47,8 @@ const ProjectsPage = () => {
       name: 'this_website',
       description: t('this_website_description'),
       technologies: ["React.js", "Vite", "Styled Components"],
-      images: ['/projects/this/cv.png'],
-      thumb: '/projects/this/cv.png',
+      images: ['/projects/this/cv.PNG'],
+      thumb: '/projects/this/cv.PNG',
       codeLink: "https://github.com/rhgarcia88/myweb",
     },
   ];
