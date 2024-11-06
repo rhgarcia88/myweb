@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Gothic&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+html{
+  scroll-behavior: smooth;
+}
+:root {
+  font-family: "Bowlby One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: var(--white-color);
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  --black-color: #2d2926;
+  --white-color: #f0f0f0;
+  --red-color: #E63946;
+  --light-gray-color: #919191;
+  --gray-color: #616161;
+    box-sizing: border-box;
+
+
+}
+
+body{
+  margin: 0;
+  padding: 0;
+}
