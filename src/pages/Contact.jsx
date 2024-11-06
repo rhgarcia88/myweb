@@ -1,11 +1,13 @@
 import React from 'react';
 import styled from 'styled-components';
 import { FaEnvelope, FaPhone } from 'react-icons/fa';
+import { useTranslation } from 'react-i18next';
 
 const Contact = () => {
+  const { t } = useTranslation();
   return (
     <ContactWrapper id="contact">
-      <ContactTitle>CONTACT ME!</ContactTitle>
+      <ContactTitle>{t('contact')}</ContactTitle>
       <ContactMethods>
         <ContactMethod href="mailto:hola@garzziadev.com">
           <FaEnvelope size={60} />

@@ -1,73 +1,73 @@
-// Experience.jsx
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import ExperienceCard from '../components/ExperienceCard';
+import { useTranslation } from 'react-i18next';
 
 const experienceData = [
   {
-    position: 'Marketing Manager & Automation Engineer',
+    position: 'marketing_manager',
     company: 'Grupo Genil | Capital Burger',
     dateStart: 'Sept 2023',
     dateEnd: 'Present',
-    description: `
-      - Data analyst for statistical insights in a restaurant group, serving over 8 restaurants.
-      - Development of complex process automations to optimize internal workflows using tools like Make (Integromat) and Zapier.
-      - Integration of AI-powered solutions and SQL databases within automated workflows to enhance decision-making and efficiency.
-      - API module integration (mySQL, GPT-4, etc) for seamless data flow and operational coherence.
-      - Design and production of online content and printed materials for restaurants (vinyls, menus, placemats, etc).
-      - Creation and execution of creative marketing campaigns across multiple channels.
-      - 3D Modeling and Rendering for advertising campaigns and digital content using Unreal Engine 5 and Blender.
-      - Logistics management for restaurant materials to ensure smooth operations.
-      - Guest management for brand collaborations and special events.
-      - Social media management for customer engagement and brand growth.
-      - Media buying and campaign management on platforms like Meta, Google, and TikTok Ads.
-      - Oversight and management of delivery services (Glovo, Just Eat, Watson, Delitbee, Uber Eats), ensuring alignment with brand standards.
-    `,
+    descriptionKeys: [
+      'data_analyst',
+      'process_automation',
+      'ai_sql_integration',
+      'api_integration_2',
+      'content_production',
+      'creative_campaigns',
+      'modeling_rendering',
+      'logistics_management',
+      'guest_management',
+      'social_media_management',
+      'media_buying'
+    ]
   },
   {
-    position: 'Interactive Experiences Developer',
+    position: 'interactive_developer',
     company: 'Alternativa Comunicación',
     dateStart: 'Mar 2023',
     dateEnd: 'Nov 2023',
-    description: `
-      - Digitalization of real environments for online tool development.
-      - Project management and team leadership.
-      - Mediation and communication between project departments.
-      - Direct client interaction.
-      - Lead developer for final projects in Unity and C#.
-      - Optimization of resources and maximum exploitation of existing assets.
-      - Projects for high-profile clients (confidential).
-    `,
+    descriptionKeys: [
+      'environment_digitalization',
+      'project_management',
+      'inter_department',
+      'client_interaction',
+      'lead_developer',
+      'resource_optimization',
+      'confidential_clients'
+    ]
   },
   {
-    position: 'React Native Developer',
+    position: 'react_native_developer',
     company: 'Área F5',
     dateStart: 'Mar 2021',
     dateEnd: 'Sept 2021',
-    description: `
-      - Complete workflow development of apps in React Native.
-      - Layout design.
-      - Functionality implementation.
-      - REST APIs integration.
-      - Version control.
-      - Etc.
-    `,
+    descriptionKeys: [
+      'workflow_development',
+      'layout_design',
+      'functionality_implementation',
+      'api_integration',
+      'version_control',
+      'etc'
+    ]
   },
   {
-    position: 'IT and Robotics Monitor',
+    position: 'it_robotics_monitor',
     company: 'Magic Place',
     dateStart: 'Oct 2019',
     dateEnd: 'May 2020',
-    description: `
-      - IT and robotics monitoring at C.E.I.P. Sagrado Corazón De Jesús during extracurricular activities.
-      - Teaching technology basics and computer skills.
-      - Introduction to software such as Adobe Photoshop, Scratch, and Arduino.
-    `,
-  },
+    descriptionKeys: [
+      'it_monitoring',
+      'teaching_technology',
+      'software_introduction'
+    ]
+  }
 ];
 
 const Experience = () => {
   const sectionRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -89,7 +89,7 @@ const Experience = () => {
 
   return (
     <ExperienceWrapper id="experience" ref={sectionRef}>
-      <SectionTitle>Experience</SectionTitle>
+      <SectionTitle>{t('experience_title')}</SectionTitle>
       <Timeline />
       <ExperienceGrid>
         {experienceData.map((exp, index) => (
@@ -97,11 +97,11 @@ const Experience = () => {
             <Connector />
             <ExperienceCard
               className="experience-card"
-              position={exp.position}
+              position={t(exp.position)}
               company={exp.company}
               dateStart={exp.dateStart}
               dateEnd={exp.dateEnd}
-              description={exp.description}
+              description={exp.descriptionKeys.map((key) => `- ${t(key)}`).join('\n')}
             />
           </ExperienceItem>
         ))}
@@ -137,7 +137,7 @@ const ExperienceGrid = styled.div`
   padding-left: 50px;
 
   @media (max-width: 768px) {
-    padding-left: 20px; /* Reduce el padding en pantallas más pequeñas */
+    padding-left: 20px;
   }
 `;
 
@@ -151,7 +151,7 @@ const Timeline = styled.div`
   border-radius: 2px;
 
   @media (max-width: 768px) {
-    left: 10px; /* Ajusta la posición en pantallas más pequeñas */
+    left: 10px;
   }
 `;
 
@@ -173,5 +173,4 @@ const Connector = styled.div`
   @media (max-width: 768px) {
     display: none;
   }
-
 `;

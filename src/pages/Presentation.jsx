@@ -1,11 +1,13 @@
 import styled from 'styled-components';
 import { FaLinkedin, FaWhatsapp } from 'react-icons/fa';
 import { fadeInDown, fadeInUp } from '../Animations';
+import { useTranslation } from 'react-i18next';
 
 export const Presentation = () => {
+  const { t, i18n } = useTranslation();
   return (
     <PresentationWrap>
-      <h3 className="hi-text">👋🏼 hi! My name is <b>Rafa</b>, let's connect</h3>
+      <h3 className="hi-text">👋🏼{t('hello')}<b>Rafa</b>{t('connect')}</h3>
       <Title>FULL <span className='red-text'>STACK</span><br /><span className='overline'>WEB DEVELOPER</span></Title>
       <div className="basement">
         <h4>based in Granada, Spain</h4>

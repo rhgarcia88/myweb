@@ -1,35 +1,35 @@
-// Studies.jsx
 import React, { useEffect, useRef } from 'react';
 import styled from 'styled-components';
 import StudyCard from '../components/StudyCard';
+import { useTranslation } from 'react-i18next';
 
 const studiesData = [
   {
-    degree: 'Full Stack Web Developer BootCamp',
+    degree: 'full_stack_developer',
     institution: 'ThePower',
     dateStart: '2023',
     dateEnd: '2024',
   },
   {
-    degree: 'Video game development and interactive experiences',
+    degree: 'video_game_dev',
     institution: 'ESCAV',
     dateStart: '2021',
     dateEnd: '2023',
   },
   {
-    degree: 'Multiplatform Application Development',
+    degree: 'multiplatform_dev',
     institution: 'I.E.S. Zaidín Vergeles',
     dateStart: '2019',
     dateEnd: '2021',
   },
   {
-    degree: 'English FCE B2 Level',
+    degree: 'english_fce',
     institution: 'Cambridge Assessment English',
     dateStart: '2018',
     dateEnd: '2018',
   },
   {
-    degree: 'Bachelor in Technological Sciences',
+    degree: 'bachelor_tech_sciences',
     institution: 'I.E.S. Alhendín',
     dateStart: '2017',
     dateEnd: '2019',
@@ -38,6 +38,7 @@ const studiesData = [
 
 const Studies = () => {
   const sectionRef = useRef(null);
+  const { t } = useTranslation();
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -59,13 +60,13 @@ const Studies = () => {
 
   return (
     <StudiesWrapper id="studies" ref={sectionRef}>
-      <SectionTitle>Studies</SectionTitle>
+      <SectionTitle>{t('studies_title')}</SectionTitle>
       <StudiesGrid>
         {studiesData.map((study, index) => (
           <StudyCard 
             key={index} 
             className="study-card" 
-            degree={study.degree} 
+            degree={t(study.degree)} 
             institution={study.institution} 
             dateStart={study.dateStart} 
             dateEnd={study.dateEnd} 
