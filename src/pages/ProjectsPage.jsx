@@ -21,8 +21,8 @@ const ProjectsPage = () => {
       name: 'eventsphere',
       description: t('eventsphere_description'),
       technologies: ["Javascript", "HTML", "CSS", "Node.js", "MongoDB", "JsonWebToken", 'Bcrypt', "Cloudinary"],
-      images: ['/projects/eventsphere/Eventsphere.png', '/projects/eventsphere/Eventsphere2.png'],
-      thumb: '/projects/eventsphere/Eventsphere.png',
+      images: ['/projects/eventsphere/Eventsphere.PNG', '/projects/eventsphere/Eventsphere2.PNG'],
+      thumb: '/projects/eventsphere/Eventsphere.PNG',
     },
     {
       id: 3,
